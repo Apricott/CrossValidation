@@ -52,11 +52,12 @@ cross_val <- function(X, y, k=2) {
 
 LOOCV <- function(X, y) {
   # funkcja przeprowadza Leave-One-Out Cross Validation
+  # (w sumie jest to szczegolny przypadek cross_val, gdy k=n, wiec moze w jednej funkcji lepiej to zrobic?)
   train_test_split()
 }
 
 #=============================== PRZYGOTOWANIE DANYCH ==============================
-income <- read.csv("E:/IiE/IV sem 2019-2020/MNWS/projekt3/zarobki.csv", sep=";")
+income <- read.csv("zarobki.csv", sep=";")
 
 y_name <- "Wynagrodzenie"
 X <- income[, !(names(income) %in% y_name)]
