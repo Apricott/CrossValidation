@@ -1,7 +1,7 @@
 
 train_model <- function(X_train, y_train) {
   # estymacja parametrow MNK
-  a <- solve(t(X) %*% X) %*% t(X) %*% y
+  a <- solve(t(X_train) %*% X_train) %*% t(X_train) %*% y_train
   return(a)
 }   
 
